@@ -160,7 +160,10 @@ def run_custom_model_with_learned_weights(spectrogram):
     
     return predictions
 def predict_with_path(path):
+
   spectrogram = path_to_spectrogram(path)  
+  print("error")
+
   predictions = run_custom_model_with_learned_weights(spectrogram)
   predicted_index = np.argmax(predictions, axis=1)[0]
   predicted_label = label_names[predicted_index]
